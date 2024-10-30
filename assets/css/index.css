@@ -1,0 +1,23 @@
+body {
+    background-color: #121212;
+}
+
+.content{
+    background-color: #1E1E1F;
+    position: absolute;
+    top: 4%;
+    border-radius: 20px;
+    box-shadow: 0 0 3px #CFDBD5;
+    height: 92vh;
+
+}
+.left{
+    width: 18vw;
+    left: 5%;
+
+}
+
+.right{
+    width: 68vw;
+    right: 5%;
+}
