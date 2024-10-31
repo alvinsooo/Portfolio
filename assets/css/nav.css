@@ -1,0 +1,38 @@
+.nav-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #282829;
+    width: 45%;
+    height: 8%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about,
+.resume,
+.portfolio{
+    color: #CFDBD5;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+.about:hover,
+.resume:hover,
+.portfolio:hover{
+    color: #FFD700;
+}
+
+.active{
+    color: #FFD700;
+}
+
+
