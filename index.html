@@ -3,6 +3,11 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/sidebar.css">
     <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/overlay.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -60,45 +65,177 @@
     <div class="content right">
 
         <div class="nav-bar">
-            <div class="about active">
+            <div class="about active" id="about">
                 About
             </div>
             
-            <div class="resume">
+            <div class="resume" id="resume">
                 Resume
             </div>
             
-            <div class="portfolio">
+            <div class="portfolio" id="portfolio">
                 Portfolio
             </div>
 
         </div>
 
 
+        <div class="section-content">
 
-        <div class="about-content">
-            <div class="title">
-                About Me
-                <hr>
+            <div id="about-section" class="about-content section active-section">
+                <div class="title">
+                    About Me
+                    <hr>
+                </div>
+                
+                <div class="paragraph">
+                    <p>
+                        I am passionate about software and web development, with a focus on backend work, but I am also skilled in frontend development and UI/UX design. As a fast learner who is eager to expand my knowledge, I actively engage and contribute ideas during team meetings, while also being capable of working independently. I am currently seeking opportunities in the software engineering field to further expand my expertise.
+                    </p>
+                </div>
+                
+                <div class="sub-title">
+                    Skills
+                    <hr>
+                </div>
+                
+                <div class="skill-container" id="skill-container">
+                    
+                </div>
             </div>
+            
+            <div id="resume-section" class="resume-content section">
+                <div class="title">
+                    Resume
+                    <hr>
+                </div>
+                
+                <div class="resume-container" id="resume-container">
+                    <div class="education">
+                        <div class="header">
+                            <img src="assets/icon/education_icon.svg" alt="Education Icon">
+                            <span>Education</span>
+                        </div>
+                        
+                        <ul class="list">
+                            <li class="item">
+                                <h3>Bachelor of Engineering in Software Engineering (Honours)</h3>
+                                <p>Monash University Malaysia </p>
+                                <p class="time-frame">2021 -  Present ( Graduate on June 2025)</p>
+                                <p>WAM : 78.6%   |    CGPA: 3.75</p>
+                            </li>    
+                            
+                            <li class="item">
+                                <h3>Monash University Foundation Year</h3>
+                                <p>Sunway College</p>
+                                <p class="time-frame">Feb - Dec 2020</p>
+                                <p>WAM : 83%</p>
+                            </li>   
 
-            <div class="paragraph">
-                <p>
-                    I am passionate about software and web development, with a focus on backend work, but I am also skilled in frontend development and UI/UX design. As a fast learner who is eager to expand my knowledge, I actively engage and contribute ideas during team meetings, while also being capable of working independently. I am currently seeking opportunities in the software engineering field to further expand my expertise.
-                </p>
+                            <li class="item">
+                                <h3>IGCSE</h3>
+                                <p>Regent International School</p>
+                                <p class="time-frame">2013 - 2019</p>
+                                <p>Grades: 2A*, 3A, 1B, 1C</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="work-experience">
+                        <div class="header">
+                            <img src="assets/icon/work_icon.svg" alt="">
+                            <span>Work Experience</span>
+                        </div>
+                        
+                        <ul class="list">
+                            <li class="item">
+                                <h3>Vimigo Technologies</h3>
+                                <p>Software Engineer Intern</p>
+                                <p class="time-frame">Nov 2023 - Feb 2024</p>
+                                <br>
+                                <p>
+                                   1. Part of the backend software developer team, tasked with fixing backend-related issues and contributing to new development projects.
+                                </p>
+                                <br>
+                                <p>
+                                    2. Produce Unit Testing for each of the new development and bug fixes, ensuring code reliability and stability.
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
+            <div id="portfolio-section" class="portfolio-content section">
+                <div class="title">
+                    Portfolio
+                    <hr>
+                </div>
+                
+                <div class="portfolio-container" id="portfolio-container">
+                    
+                    <div class="portfolio-item" onclick="openOverlay(0)">
+                        <div class="image-container">
+                            <img src="assets/img/9MM/NMM_main.png" alt="">
+                            <div class="item-overlay ">
+                                <img src="assets/icon/expend_icon.svg" alt="">
+                            </div>
+                        </div>
+                        <h3> 9 Man Morris Game</h3>
+                        <p>App Development</p>
+                    </div>
 
-            <div class="sub-title">
-                Skills
-                <hr>
+                    <div class="portfolio-item" onclick="openOverlay(1)">
+                        <div class="image-container">
+                            <img src="assets/img/ATS/ATS-main.png" alt="">
+                            <div class="item-overlay ">
+                                <img src="assets/icon/expend_icon.svg" alt="">
+                            </div>
+                        </div>
+                            <h3> Auto-Grading Tutoring System</h3>
+                        <p>Web Development</p>
+                    </div>
+
+                    <div class="portfolio-item" onclick="openOverlay(2)">
+                        <div class="image-container">
+                            <img src="assets/img/HM/HM_main.png" alt="">
+                            <div class="item-overlay ">
+                                <img src="assets/icon/expend_icon.svg" alt="">
+                            </div>
+                        </div>
+                        <h3> Hearty Meal ( Meal Logging System)</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="skill-container" id="skill-container">
-
-            </div>
+            
         </div>
-
          
+    </div>
+
+
+    <div class="portfolio-overlay" id="portfolio-overlay">
+        <div class="overlay-content">
+            <div class="close-button" id="close-portfolio">x</div>
+            <div class="title" id="overlay-title">
+                <!-- Hearty Meal -->
+            </div>
+
+            <div class="overlay-image"  >
+                <a class="navigate-left" id="navigate-left" href="#side-1" onclick="navigateLeft()"><</a>
+                <div class="overlay-image-container" id="overlay-image">
+                    <img src="assets/img/HM/HM_main.png" alt="" id="slide-1">
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                    </div>
+                </div>
+                <a class="navigate-right" id="navigate-right" href="#side-1" onclick="navigateRight()">></a>
+            </div>
+
+            <div class="overlay-description" id="overlay-description">
+
+        </div>
     </div>
 </body>
 
