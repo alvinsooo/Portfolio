@@ -36,3 +36,43 @@
 }
 
 
+.small-nav{
+    display: none;
+    position:fixed;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 0;
+    background-color: #282829;
+    opacity: 0.85;
+    padding: 2% 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@media (max-width: 1366px){
+    .small-nav{
+        display: flex;
+    }
+
+    .nav-bar{
+        display: none;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .about,
+    .resume,
+    .portfolio{
+        font-size: 0.7rem;
+
+    }
+}
+
+@media (max-width: 480px){
+
+    .small-nav{
+        padding: 5% 0;
+    }
+}

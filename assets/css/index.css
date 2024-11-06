@@ -1,31 +1,45 @@
-body {
+
+body{
     background-color: #121212;
-    font-family: 'Roboto', sans-serif;
     color: #CFDBD5;
-    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
-.content{
+.body-container{
+    display:  flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    column-gap: 5%;
+}
+
+
+.left{
+    width:20%;
     background-color: #1E1E1F;
-    position: absolute;
-    top: 6%;
+    height: 85%;
     border-radius: 20px;
     box-shadow: 0 0 3px #CFDBD5;
-    height: 85vh;
-
-}
-.left{
-    width: 18vw;
-    left: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
 }
 
 .right{
-    width: 68vw;
-    right: 5%;
+    width: 60%;
+    background-color: #1E1E1F;
+    height: 85%;
+    border-radius: 20px;
+    box-shadow: 0 0 3px #CFDBD5;
+    position: relative;
 }
+
+
 
 .section{
     display:none
@@ -46,7 +60,7 @@ body {
 
 
 .title{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     width: fit-content;
 }
@@ -123,16 +137,6 @@ body {
     margin-left: 4%;
 }
 
-/* .list::before {
-    content: '';
-    position: absolute;
-    left: 8.15%;
-    top: 22%;
-    bottom: 20%;
-    width: 3px;
-    
-    background-color: #F5CB5C;
-} */
 
 .list li::marker {
     font-size: 2rem; 
@@ -164,16 +168,6 @@ body {
     font-size: 0.8rem;
 }
 
-.resume-container hr{
-    position: absolute;
-    width: 43%;
-    border: 2px solid #CFDBD5;
-    border-radius: 5px;
-    margin-top: 10%;
-    rotate: 90deg;
-    top: 39%;
-    right: 70%;
-}
 
 .portfolio-container{
     margin-top: 5%;
@@ -245,3 +239,243 @@ body {
 
 
 
+@media (max-width: 1400px){
+ 
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .paragraph{
+        font-size: 1rem;
+    }
+
+    .sub-title{
+        font-size: 1.2rem;
+    }
+
+    .skill-item{
+        font-size: 0.8rem;
+    }
+
+    .header span{
+        font-size: 1.2rem;
+    }
+
+    .header img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .list {
+        margin-left: 1%;
+    }
+    
+    
+    .list li::marker {
+        font-size: 1.7rem; 
+        color: #F5CB5C; 
+        z-index: 2;
+    
+    }
+    
+    
+    .item p{
+        font-size: 0.8rem;
+    }
+
+    .item h3{
+        font-size: 1rem;
+    }
+
+    .time-frame{
+        font-size: 0.6rem;
+    }
+
+    .portfolio-item h3{
+        font-size: 1rem;
+    }
+    .portfolio-item p{
+        font-size: 0.8rem;
+    }
+
+    
+}
+
+
+@media (max-width: 1366px){
+    
+    body{
+        overflow-y: scroll;
+        scroll-behavior: smooth;    
+    }
+
+    .body-container{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        justify-content: flex-start;
+        overflow: scroll;
+    }
+
+    .left{
+        width: 90%;
+        margin-top: 5%;
+        height: fit-content;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
+
+    .right{
+        width: 90%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        height: fit-content;
+    }
+
+
+
+    .section-content{
+        margin: 5%;
+    }
+
+    .title{
+        font-size: 1.4rem;
+    }
+    
+    .paragraph{
+        font-size: 1rem;
+    }
+
+    .sub-title{
+        font-size: 1.1rem;
+    }
+
+    .skill-item{
+        font-size: 0.8rem;
+        padding: 1% 3%;
+    }
+
+    .education{
+        margin-top: 2%;
+    }
+
+    .resume-container{
+        display: grid;
+        grid-template-columns : 100%;
+
+    }
+
+    .header img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .header span{
+        font-size: 1.1rem;
+    }
+
+    .work-experience{
+        margin-top: 5%;
+    }
+
+
+    .list {
+        list-style-type: disc; 
+        margin-left: 1%;
+    }
+    
+    
+    .list li::marker {
+        font-size: 1.5rem; 
+    }
+
+    .list li{
+        margin-bottom: 5%;
+    }
+
+    .item p{
+        font-size: 0.7rem;
+    }
+    
+    .item h3{
+        font-size: 1rem;
+    }
+    
+    .time-frame{
+        font-size: 0.6rem;
+    }
+
+
+    
+    .portfolio-item h3{
+        font-size: 1rem;
+    }
+    .portfolio-item p{
+        font-size: 0.8rem;
+    }
+    
+    .portfolio-item img{
+        border-radius: 10px;
+    }
+    
+    .image-container{
+        height: 140px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    
+
+    .item-overlay{
+       
+        height: 140px;
+        width: 200px;
+        border-radius: 10px;
+        margin-top: -140px;
+    }
+
+    .item-overlay img{
+        width: 25px;
+        height: 35px;
+    }
+    
+
+}
+
+@media (max-width: 480px){
+    .paragraph{
+        font-size: 0.8rem;
+    }
+
+    .header img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .header span{
+        font-size: 0.95rem;
+    }
+
+
+    .list {
+        margin-left: 0%;
+    }
+    
+
+
+
+    .item p{
+        font-size: 0.5rem;
+    }
+    
+    .item h3{
+        font-size: 0.8rem;
+    }
+    
+    .time-frame{
+        font-size: 0.4rem;
+    }
+
+}

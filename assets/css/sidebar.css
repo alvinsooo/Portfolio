@@ -1,51 +1,142 @@
-.profile-img{
-    margin-top: 10%;
+
+.profile-pic{
     object-fit: cover;
     border-radius: 20px;
-    width: 60%;
-    height: 25%;
+    width: 200px;
+    margin: 5%;
+    margin-top: 10%;
 }
 
 .name{
-    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     font-size: 1.2rem;
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+.expend{
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Chokokutai", system-ui;
+    text-decoration: none;
 }
 
 
-.left hr{
-    width: 75%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
-
-.phone,
-.email,
-.linkedin,
-.location{
-    margin-top: 5%;
+.info{
+    margin-top: 12%;
     display: flex;
     flex-direction: row;
     column-gap: 5%;
-    width: 75%;
+    width: 80%;
     margin-bottom: 5%;
     font-size: 0.8rem;
 }
 
-.sidebar-content{
+.info-content{
     display: flex;
     flex-direction: column;
     row-gap: 20%;
 }
 
-.linkedin a{
+.info a{
     color: #CFDBD5;
     text-decoration: none;
 }
 
-.linkedin a:hover{
+.info a:hover{
     color: #FFD700;
-text-decoration: underline;}
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1366px){
+    .expend{
+        display: block;
+        position: absolute;
+        font-size: 1.7rem;
+        top: 2%;
+        right: 4%;
+        rotate: 90deg;
+        color: #CFDBD5;
+    }
+
+    .expend:hover{
+        color: #FFD700;
+        
+    }
+
+    .profile-pic{
+        width: 150px;
+        margin: 2.5% 0; 
+
+    }
+
+    .name{
+        margin:0;
+        flex-direction: row;
+        column-gap: 2%; 
+        width: 55%;
+    }
+
+    .personal-info{
+        width: 80%;
+        margin: auto;
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 5%;
+    }
+
+    .personal-info hr{
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    .personal-info-on{
+        display: grid;
+
+    }
+
+    .info{
+        margin: 5%;
+    }
+
+    .expend-on{
+        rotate: 270deg;
+    }
+}
+
+@media (max-width: 840px){
+
+    .info{
+        font-size: 0.6rem;
+    }
+
+    .info img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .info{
+        font-size: 0.45rem;
+    }
+
+    .info img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .name{
+        font-size: 1rem;
+    }
+
+    .profile-pic{
+        width: 100px;
+    }
+}

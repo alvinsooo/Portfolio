@@ -1,5 +1,28 @@
+
+
+function showMore(){
+
+    const content = document.getElementById('personal-info');
+    const btn = document.getElementById('expend');
+
+    if(content.classList.contains('personal-info-on')){
+        content.classList.remove('personal-info-on');
+    } else [
+        content.classList.add('personal-info-on')
+    ]
+
+    if (btn.classList.contains('expend-on')){
+        btn.classList.remove('expend-on');
+    } else {
+        btn.classList.add('expend-on');
+    }
+
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.nav-bar div');
+    const smallNavItems = document.querySelectorAll('.small-nav div');
     const sections = document.querySelectorAll('.section-content div');
 
     navItems.forEach(item => {
@@ -20,8 +43,28 @@ document.addEventListener('DOMContentLoaded', function() {
              }
         });
     });
-});
 
+    smallNavItems.forEach(item => {
+        item.addEventListener('click', function() {
+
+            smallNavItems.forEach(nav => nav.classList.remove('active'));
+
+            this.classList.add('active');
+
+             sections.forEach(section => section.classList.remove('active-section'));
+
+             if (this.id === 'about') {
+                 document.getElementById('about-section').classList.add('active-section');
+             } else if (this.id === 'resume') {
+                 document.getElementById('resume-section').classList.add('active-section');
+             } else if (this.id === 'portfolio') {
+                 document.getElementById('portfolio-section').classList.add('active-section');
+             }
+
+        });
+    });
+
+});
 
 
 const items = ['Python', 'PHP', 'Laravel', 'Java', 'JavaScript', 'TypeScript', 'Nuxt', 'Nest', "UI/UX", 'Usability', 'Object Oriented Programming', 'Problem Solving', 'Critical Thinking', 'Data Structures', 'Figma', 'MySQL', 'MongoDB', 'PostgreSQL', 'Git' 
@@ -36,7 +79,6 @@ items.forEach(item => {
     
     container.appendChild(item_div);
 });
-
 
 const portfolio_overlay = document.getElementById('portfolio-overlay');
 const portfolio_overlay_close_btn = document.getElementById('close-portfolio');
